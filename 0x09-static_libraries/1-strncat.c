@@ -1,33 +1,27 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strncat - two words
- * @dest : pointer to char param
- * @src : pointer to char param
- * @n : int parameter
- * Return: *dest
- */
+  * *_strncat - Entry point
+  * Description - 'function concantenating two strings with n as parameter'
+  * @src: char string type
+  * @dest: char string type destination
+  * @n: maximum number of bytes to be used
+  * Return: pointer to dest
+  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int m;
-	int i;
+	int h = 0;
+	int j;
 
-	m = 0;
-
-	for (i = 0; i < 1000; i++)
+	while (dest[h] != '\0')
 	{
-		if (dest[i] == '\0')
-		{
-			break;
-		}
-		m++;
+		h++;
 	}
-
-	for (i = 0; src[i] != '\0' && i < n; i++)
+	for (j = 0; j < n && src[j] != '\0'; j++, h++)
 	{
-		dest[m + i] = src[i];
+		dest[h] = src[j];
 	}
-	dest[m + i] = '\0';
+	dest[h] = '\0';
 	return (dest);
 }

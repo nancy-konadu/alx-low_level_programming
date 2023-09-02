@@ -1,20 +1,21 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _memcpy - irontnoux2
- * @dest: pointer to char params
- * @src: pointer to char params
- * @n: size
- * Return: *dest
- */
+  * *_memcpy - Entry point
+  * Description - 'a function that copies memory area'
+  * @dest: destination char string type
+  * @src: original char string type
+  * @n: maximum number of bytes
+  * Return: pointer to dest
+  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int h;
 
-	for (i = 0; i < n; i++)
+	for (h = 0; h < n; h++)
 	{
-		dest[i] = src[i];
+		dest[h] = src[h];
 	}
 	return (dest);
 }

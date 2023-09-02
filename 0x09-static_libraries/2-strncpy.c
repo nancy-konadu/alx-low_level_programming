@@ -1,25 +1,25 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strncpy - two words
- * @dest : pointer to char params
- * @src : pointer to char params
- * @n : int params
- * Return: *dest
- */
+  * *_strncpy - Entry point
+  * Description - 'a function that copies a string'
+  * @dest: destination char string type
+  * @src: initial char string type
+  * @n: maximum number of bytes to be used
+  * Return: pointer to dest
+  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int cob;
 
-	for (i = 0; src[i] != '\0' && i < n; i++)
+	for (cob = 0; cob < n && src[cob] != '\0'; cob++)
 	{
-		dest[i] = src[i];
+		dest[cob] = src[cob];
 	}
-
-	for ( ; i < n; i++)
+	for (; cob < n; cob++)
 	{
-		dest[i] = '\0';
+		dest[cob] = '\0';
 	}
 	return (dest);
 }
